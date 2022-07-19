@@ -4,6 +4,7 @@
 body {
     background-color: white;
     font-family: 'Ubuntu', sans-serif;
+    color: darkblue;
 }
  /* Header top activities section start */
 .top-header{
@@ -12,12 +13,19 @@ body {
     font-size: 35px;
     font-weight: 700;
 }
+.top-header:hover{
+    color: darkcyan;
+}
+h3:hover{
+    color: darkcyan;
+}
 .top-activities{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-column-gap: 25px;
     padding-left: 2%;
     padding-right: 2%;
+    margin-bottom: 50px;
  
 }
 .spots{
@@ -29,10 +37,7 @@ box-shadow: 4px 4px #9d9e9e;
 
 }
 
-.spot,img{
-    width: 300px;
-    height: 150px;
-}
+
 .ratings{
     display: flex;
     align-items:baseline ;
@@ -43,13 +48,77 @@ box-shadow: 4px 4px #9d9e9e;
     color:goldenrod;
     margin-left: 0;
 }
+  /* top recommanded section designs */
 
+.blogs{
+    margin-top: 50px;
+    display: grid;
+grid-template-columns: repeat(2,1fr);
+grid-column-gap: 30px;
+padding-left: 2%;
+padding-right: 2%;
+}
+.blog{
+    display: flex;
+padding-bottom: 30px;
+align-items: center;
+justify-content: center;
+margin-top: 0;
+}
+.article-banner,img{
+    width: 100%;
+    height: 200px;
+    border: 2px solid #4f97a3;
+ 
+   
+}
+.article-info{
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+}
+.more{
+display: flex;
+    text-decoration: none;
+justify-content: end;
+}
 
+/* For Moblie Responsive */
 
+@media screen and  (max-width:576px) {
+    .top-activities{
+        grid-template-columns: repeat(1,1fr);
+   
+    }
+    .spots{
+margin-bottom: 30px;
+    }
+}
 
+@media screen and (min-width:577px) and (max-width:1024px) {
+    .top-activities{
+        grid-template-columns: repeat(2,1fr);
+   
+    }
+    .spots{
+margin-bottom: 30px;
+    }
+}
+ /* for recommanded section mobile resposive */
+@media screen and  (max-width:576px) {
+    .blogs{
+        grid-template-columns: repeat(1,1fr);
+  grid-column:reverse;
+    }
+}
 
-
-
+@media screen and (min-width:577px) and (max-width:1024px) {
+    .blogs{
+        grid-template-columns: repeat(2,1fr);
+   
+    }
+   
+}
 
 
 
